@@ -30,10 +30,10 @@ jobs:
           flags: 'g'
 
       - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v14
+        uses: samirrajpurkar/beanstalk-deploy@v14
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: react-docker-app
           environment_name: Reactdockerapp-env
           version_label: "react-docker-app-deployment-${{ steps.format-time.outputs.replaced }}"
